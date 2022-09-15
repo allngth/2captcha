@@ -20,12 +20,16 @@ class Solver {
     }
 
     /**
-     * @param {*} captcha
+     * @param {Captcha} captcha
      * @returns {Promise<number>}
      */
     async in(captcha) {
         captcha.key = this.apiKey;
         captcha.json = 1;
+
+        if (this.helpToDeveloper) {
+            captcha.soft_id = 3486;
+        }
 
         const result = await axios.post(this.url + '/in.php', JSON.parse(JSON.stringify(captcha)), {
             headers: {
