@@ -8,7 +8,7 @@ class AuthOptions {
      * Do not send the confirmation of successfully accepted requests.
      * @type {boolean}
      */
-    suppressSuccess = false;
+    suppressSuccess = true; // todo: process confirmations
 }
 
 exports.AuthOptions = AuthOptions;
