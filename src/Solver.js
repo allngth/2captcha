@@ -2,17 +2,6 @@ const axios = require('axios').default;
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 
 class Solver {
-    /**
-     * This option helps me to support this script
-     * If this value is true, 2captcha will give me 10%
-     * of your captcha spend.
-     *
-     * Note: this option NOT increase your bid price,
-     * 2captcha will give me 10% from 2captcha profit only.
-     *
-     * @type {boolean}
-     */
-    helpToDeveloper = true;
     url = 'https://2captcha.com';
 
     constructor(apiKey, options = {}) {
@@ -26,10 +15,7 @@ class Solver {
     async in(captcha) {
         captcha.key = this.apiKey;
         captcha.json = 1;
-
-        if (this.helpToDeveloper) {
-            captcha.soft_id = 3486;
-        }
+        captcha.soft_id = 3486;
 
         const result = await axios.post(this.url + '/in.php', JSON.parse(JSON.stringify(captcha)), {
             headers: {

@@ -2,6 +2,7 @@
   "name": "2captcha",
   "version": "1.0.0",
   "dependencies": {
-    "axios": "^0.27.2"
+    "axios": "^0.27.2",
+    "sharp": "^0.31.0"
   }
 }
