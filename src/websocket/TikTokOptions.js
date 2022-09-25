@@ -15,3 +15,5 @@ class TikTokOptions {
      */
     cookies = [];
 }
+
+exports.TikTokOptions = TikTokOptions;
