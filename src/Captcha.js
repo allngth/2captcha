@@ -70,19 +70,19 @@ class Captcha {
      * Language code. See the list of supported languages - https://2captcha.com/2captcha-api#language
      * @type {string}
      */
-    lang = undefined;
+    lang;
     /**
      * Text will be shown to worker to help him to solve the captcha correctly.
      * For example: type red symbols only.
      * @type {string}
      */
-    textinstructions = undefined;
+    textinstructions;
     /**
      * Image with instruction for solving reCAPTCHA.
      * Not required if you're sending instruction as text with textinstructions.
      * @type {string}
      */
-    imginstructions = undefined;
+    imginstructions;
     /**
      * 0 - disabled
      * 1 - enabled.
@@ -96,7 +96,7 @@ class Captcha {
      * URL should be registered on the server. More info here - https://2captcha.com/2captcha-api#pingback
      * @type {string}
      */
-    pingback = undefined;
+    pingback;
     /**
      * 0 - server will send the response as plain text
      * 1 - tells the server to send the response as JSON
@@ -108,18 +108,18 @@ class Captcha {
      * their software users.
      * @type {number}
      */
-    soft_id = undefined;
+    soft_id;
     /**
      * Format: login:password@123.123.123.123:3128
      * You can find more info about proxies here - https://2captcha.com/2captcha-api#proxies
      * @type {string}
      */
-    proxy = undefined;
+    proxy;
     /**
      * Type of your proxy: HTTP, HTTPS, SOCKS4, SOCKS5.
      * @type {string}
      */
-    proxytype = undefined;
+    proxytype;
 }
 
 exports.Captcha = Captcha;
