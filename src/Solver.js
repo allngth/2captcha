@@ -67,6 +67,8 @@ class Solver {
 
             await sleep(interval * 1000);
         }
+
+        throw new Error('Captcha not solved for ' + timeout + ' seconds');
     }
 }
 
