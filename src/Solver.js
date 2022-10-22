@@ -27,6 +27,8 @@ class Solver {
             throw Error(result.data.error_text);
         }
 
+        console.log(result.data);
+
         return result.data.request;
     }
 
@@ -52,6 +54,8 @@ class Solver {
                     'Content-Type': 'multipart/form-data'
                 }
             });
+
+            console.log(result.data);
 
             if (result.data.status === 1) {
                 return result.data.request;
